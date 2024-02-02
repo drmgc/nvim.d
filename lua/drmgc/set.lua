@@ -4,7 +4,8 @@ vim.opt.swapfile = false
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -35,5 +36,5 @@ vim.opt.incsearch = true
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
 vim.opt.undofile = true
 
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 

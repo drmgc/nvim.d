@@ -14,5 +14,5 @@ vim.api.nvim_create_user_command( 'Dark',
   end,
   { nargs = 0 })
 
-vim.cmd.Light()
+vim.cmd.Dark()
 
