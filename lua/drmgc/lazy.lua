@@ -13,12 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-  {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  { 'folke/tokyonight.nvim', lazy = false, priority = 1000, opts = {} },
+  { 'Th3Whit3Wolf/one-nvim', priority = 1000, lazy = false },
 
   -- lsp-zero
   { 'illiamboman/mason.nvim' },
