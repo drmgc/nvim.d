@@ -1,0 +1,94 @@
+##
+## JavaScript
+##
+
+snippet if "if"
+	if (${1}) {${0}}
+
+snippet el "else"
+	else {${0}}
+
+snippet for
+	for (${1}) {${0}}
+
+snippet fof "for of"
+	for (const ${1} of ${2}) {${0}}
+
+snippet while
+	while (${1}) {${0}}
+
+snippet e "export"
+	export $0
+
+# functions
+
+snippet fun "function"
+	function (${1}) {
+		${0:${VISUAL}}
+	}
+
+snippet afun "async function"
+	async function (${1}) {
+		${0:${VISUAL}}
+	}
+
+snippet l "lambda"
+	(${1}) => {${0}}
+
+snippet al "async lambda"
+	async (${1}) => {${0}}
+
+snippet mt "method"
+	$1($2) {$0}
+
+snippet amt "async method"
+	async $1($2) {$0}
+
+##
+## Promise
+##
+
+snippet p "Promise<...>"
+	Promise<${1:unknown}>
+
+##
+## Classes
+##
+
+snippet cl
+	class ${1} {
+		${0:${VISUAL}}
+	}
+
+snippet ecl
+	export class ${1} {
+		${0:${VISUAL}}
+	}
+
+snippet constr
+	constructor($1) {$0}
+
+##
+## Jest
+##
+
+snippet jd "jest / describe"
+	describe('${1}', () => {${0}});
+
+snippet jt "jest / it"
+	it('${1}', () => {${0}});
+
+snippet ajt "jest / it (async)"
+	it('${1}', async () => {${0}});
+
+##
+## Exceptions
+##
+
+snippet the "throw new Error(...)"
+	throw new Error($1);
+
+snippet nie "throw new Error(...)"
+	throw new Error('Not yet implemented');$0
+
+
