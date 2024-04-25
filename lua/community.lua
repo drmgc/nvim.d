@@ -13,6 +13,6 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.godot" },
-  { import = "astrocommunity.completion.copilot-lua", cond = envs.shouldEnableCopilot },
-  { import = "astrocommunity.completion.copilot-lua-cmp", cond = envs.shouldEnableCopilot },
+  { import = "astrocommunity.completion.copilot-lua", cond = envs.enable_copilot },
+  { import = "astrocommunity.completion.copilot-lua-cmp", cond = envs.enable_copilot },
 }
