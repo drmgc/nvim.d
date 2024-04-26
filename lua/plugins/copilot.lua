@@ -1,5 +1,7 @@
 local envs = require "envs"
 
+if not envs.enable_copilot then return {} end
+
 return {
   "zbirenbaum/copilot.lua",
   cond = function()

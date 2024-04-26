@@ -1,3 +1,7 @@
+local envs = require "envs"
+
+if not envs.enable_copilot then return {} end
+
 return {
   { import = "astrocommunity.completion.copilot-lua" },
   {
