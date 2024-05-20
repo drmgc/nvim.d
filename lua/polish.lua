@@ -7,13 +7,3 @@ vim.opt.spelloptions = "camel"
 vim.opt.spell = true
 
 require("lspconfig").gdscript.setup { cmd = { "ncat", "localhost", "6005" } }
-
-require("lspconfig").tsserver.setup {
-  init_options = {
-    preferences = {
-      -- other preferences...
-      importModuleSpecifierPreference = "relative",
-      importModuleSpecifierEnding = "minimal",
-    },
-  },
-}
