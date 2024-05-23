@@ -19,6 +19,8 @@ end
 ---@return string | nil
 local function get_enum_env(env_name, enum)
   local rawEnv = vim.env[env_name]
+  if rawEnv == nil then return nil end
+
   for _, value in pairs(enum) do
     if value == rawEnv then return rawEnv end
   end
