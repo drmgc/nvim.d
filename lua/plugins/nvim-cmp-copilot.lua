@@ -1,4 +1,4 @@
-local envs = require "envs"
+local envs = require "drmgc.envs"
 
 if not envs.enable_copilot then return {} end
 
