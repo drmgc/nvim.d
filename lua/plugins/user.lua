@@ -84,6 +84,10 @@ return {
         -- must be specified in the next line
         paths = { "./snippets" },
       }
+
+      require("luasnip.loaders.from_lua").lazy_load {
+        paths = { vim.fn.stdpath "config" .. "/snippets" },
+      }
     end,
   },
 
