@@ -7,6 +7,7 @@ return {
     opts.config["typescript-tools"].settings.tsserver_file_preferences = {
       importModuleSpecifierPreference = envs.ts.importModuleSpecifierPreference or "relative",
       importModuleSpecifierEnding = "minimal",
+      insertSpaceAfterOpeningAndBeforeClosingEmptyBraces = false,
     }
     return opts -- return final config table
   end,
