@@ -1,12 +1,17 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- Here are some examples:
-
 ---@type LazySpec
 return {
+  --
+  -- NEW PLUGINS
+  --
+
   -- colorscheme
   { "sainnhe/edge" },
+
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require("lsp_signature").setup() end,
+  },
 
   {
     "folke/todo-comments.nvim",
@@ -15,73 +20,61 @@ return {
     opts = {},
     cmd = { "TodoQuickFix" },
     keys = {
-      { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
+    { "<leader>T", function () Snacks.picker.todo_comments() end, desc = "Open TODOs in Telescope" },
     },
   },
-  {
+
+  { -- Surround selections, stylishly 😎
     "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     opts = {},
   },
-  {
+
+  { -- Split or join list-like syntax constructs
     "bennypowers/splitjoin.nvim",
     lazy = true,
     keys = {
-      { "gj", function() require("splitjoin").join() end, desc = "Join the object under cursor" },
-      { "gs,", function() require("splitjoin").split() end, desc = "Split the object under cursor" },
+    { "gj", function() require("splitjoin").join() end, desc = "Join the object under cursor" },
+    { "gs,", function() require("splitjoin").split() end, desc = "Split the object under cursor" },
     },
   },
 
-  -- -- == Examples of Adding Plugins ==
   --
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function() require("lsp_signature").setup() end,
-  -- },
+  -- OVERRIDINGS
+  --
 
-  -- == Examples of Overriding Plugins ==
-
-  -- -- customize alpha options
-  -- {
-  --   "goolord/alpha-nvim",
-  --   opts = function(_, opts)
-  --     -- customize the dashboard header
-  --     opts.section.header.val = {
-  --       " █████  ███████ ████████ ██████   ██████",
-  --       "██   ██ ██         ██    ██   ██ ██    ██",
-  --       "███████ ███████    ██    ██████  ██    ██",
-  --       "██   ██      ██    ██    ██   ██ ██    ██",
-  --       "██   ██ ███████    ██    ██   ██  ██████",
-  --       " ",
-  --       "    ███    ██ ██    ██ ██ ███    ███",
-  --       "    ████   ██ ██    ██ ██ ████  ████",
-  --       "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-  --       "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-  --       "    ██   ████   ████   ██ ██      ██",
-  --     }
-  --     return opts
-  --   end,
-  -- },
-
-  -- -- You can disable default plugins as follows:
-  -- { "max397574/better-escape.nvim", enabled = false },
+  -- customize dashboard options
+  {
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = table.concat({
+            " █████  ███████ ████████ ██████   ██████ ",
+            "██   ██ ██         ██    ██   ██ ██    ██",
+            "███████ ███████    ██    ██████  ██    ██",
+            "██   ██      ██    ██    ██   ██ ██    ██",
+            "██   ██ ███████    ██    ██   ██  ██████ ",
+            "",
+            "███    ██ ██    ██ ██ ███    ███",
+            "████   ██ ██    ██ ██ ████  ████",
+            "██ ██  ██ ██    ██ ██ ██ ████ ██",
+            "██  ██ ██  ██  ██  ██ ██  ██  ██",
+            "██   ████   ████   ██ ██      ██",
+          }, "\n"),
+        },
+      },
+    },
+  },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
       require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-      -- add more custom luasnip configuration such as filetype extend or custom snippets
-      -- local luasnip = require "luasnip"
-      -- luasnip.filetype_extend("javascript", { "javascriptreact" })
 
       require("luasnip.loaders.from_snipmate").lazy_load {
-        -- this can be used if your configuration lives in ~/.config/nvim
-        -- if your configuration lives in ~/.config/astronvim, the full path
-        -- must be specified in the next line
         paths = { "./snippets" },
       }
 
