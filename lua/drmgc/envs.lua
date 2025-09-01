@@ -1,5 +1,4 @@
 local envs = {
-  enable_copilot = "NVIM_ENABLE_COPILOT",
   ts_importModuleSpecifierPreference = "NVIM_TS_importModuleSpecifierPreference",
 }
 
@@ -29,7 +28,6 @@ local function get_enum_env(env_name, enum)
   return nil
 end
 
-M.enable_copilot = get_bool_env(envs.enable_copilot)
 M.ts = {
   importModuleSpecifierPreference = get_enum_env(
     envs.ts_importModuleSpecifierPreference,
