@@ -20,7 +20,7 @@ return {
     opts = {},
     cmd = { "TodoQuickFix" },
     keys = {
-    { "<leader>T", function () Snacks.picker.todo_comments() end, desc = "Open TODOs in Telescope" },
+      { "<leader>T", function() Snacks.picker.todo_comments() end, desc = "Open TODOs in Telescope" },
     },
   },
 
@@ -35,8 +35,8 @@ return {
     "bennypowers/splitjoin.nvim",
     lazy = true,
     keys = {
-    { "gj", function() require("splitjoin").join() end, desc = "Join the object under cursor" },
-    { "gs,", function() require("splitjoin").split() end, desc = "Split the object under cursor" },
+      { "gj", function() require("splitjoin").join() end, desc = "Join the object under cursor" },
+      { "gs,", function() require("splitjoin").split() end, desc = "Split the object under cursor" },
     },
   },
 
