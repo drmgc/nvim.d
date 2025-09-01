@@ -6,7 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.terraform" },
