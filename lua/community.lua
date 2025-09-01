@@ -16,4 +16,6 @@ return {
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.completion.copilot-lua", cond = envs.enable_copilot },
   { import = "astrocommunity.completion.copilot-lua-cmp", cond = envs.enable_copilot },
+
+  { import = "astrocommunity.recipes.neovide" },
 }
