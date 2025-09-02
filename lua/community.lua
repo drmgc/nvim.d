@@ -2,6 +2,8 @@
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
 
+local envs = require "drmgc.envs"
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -12,6 +14,8 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.typst" },
+  { import = "astrocommunity.completion.copilot-lua", cond = envs.enable_copilot },
+  { import = "astrocommunity.completion.copilot-lua-cmp", cond = envs.enable_copilot },
 
   { import = "astrocommunity.motion.leap-nvim" },
 
