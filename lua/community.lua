@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.godot" },
