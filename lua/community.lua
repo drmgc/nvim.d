@@ -12,5 +12,7 @@ return {
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.typst" },
 
+  { import = "astrocommunity.motion.leap-nvim" },
+
   { import = "astrocommunity.recipes.neovide" },
 }
