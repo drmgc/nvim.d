@@ -8,7 +8,7 @@ return {
       "lua",
       "vim",
       "typescript",
-      "ledger"
+      "ledger",
       -- add more arguments for adding more treesitter parsers
     },
   },
