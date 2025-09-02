@@ -53,6 +53,16 @@ return {
         -- This can be found in the `lua/lazy_setup.lua` file
       },
     },
+    rooter = {
+      -- own root for each tabpage
+      scope = "tab",
+
+      -- auto-fix current dir on tab switch
+      autochdir = true,
+
+      -- do not notify about chdir on each tab switch
+      notify = false,
+    },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
