@@ -35,8 +35,9 @@ return {
     "bennypowers/splitjoin.nvim",
     lazy = true,
     keys = {
-      { "gj", function() require("splitjoin").join() end, desc = "Join the object under cursor" },
-      { "gs,", function() require("splitjoin").split() end, desc = "Split the object under cursor" },
+      { "gj", desc = "splitjoin.nvim" },
+      { "gjj", function() require("splitjoin").join() end, desc = "Join the object under cursor" },
+      { "gjs,", function() require("splitjoin").split() end, desc = "Split the object under cursor" },
     },
   },
 
