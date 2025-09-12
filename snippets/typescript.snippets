@@ -75,6 +75,9 @@ snippet constr
 snippet jd "jest / describe"
 	describe('${1}', () => {${0}});
 
+snippet jdt "jest / describe keyof Testee"
+	describe('${1}' satisfies keyof Testee, () => {${0}});
+
 snippet jt "jest / it"
 	it('${1}', () => {${0}});
 
@@ -90,4 +93,11 @@ snippet the "throw new Error(...)"
 
 snippet nie "throw new Error(...)"
 	throw new Error('Not yet implemented');$0
+
+##
+## Asserts
+##
+
+snippet imas "import assert ..."
+	import assert from 'node:assert/${1:strict}';$0
 
