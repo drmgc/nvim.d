@@ -41,6 +41,16 @@ return {
     },
   },
 
+  { -- Displays coverage information in the sign column.
+    "andythigpen/nvim-coverage",
+    version = "*",
+    config = function()
+      require("coverage").setup {
+        auto_reload = true,
+      }
+    end,
+  },
+
   --
   -- OVERRIDINGS
   --
