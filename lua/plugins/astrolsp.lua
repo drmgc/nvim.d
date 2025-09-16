@@ -37,12 +37,20 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "cucumber_language_server",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      cucumber_language_server = {
+        settings = {
+          cucumber = {
+            features = { "**/*.feature" },
+            glue = { "**/steps/**/*.ts", "**/step_definitions/**/*.ts" },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
