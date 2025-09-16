@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.typst" },
+  { import = "astrocommunity.pack.jj" },
 
   { import = "astrocommunity.motion.leap-nvim" },
 
