@@ -92,7 +92,11 @@ snippet the "throw new Error(...)"
 	throw new Error($1);
 
 snippet nie "throw new Error(...)"
-	throw new Error('Not yet implemented');$0
+	throw new Error('Not yet implemented'); // TODO: implement$0
+
+snippet anie "throw new Error(...) /* async */"
+  await Promise.resolve()
+	throw new Error('Not yet implemented'); // TODO: implement$0
 
 ##
 ## Asserts
