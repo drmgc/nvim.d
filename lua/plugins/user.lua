@@ -18,6 +18,14 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     event = "User AstroFile",
     opts = {},
+    -- FIX: fix
+    -- TODO: todo
+    -- HACK:
+    -- WARN:
+    -- PERF:
+    -- NOTE:
+    -- TEST:
+    -- REVIEW:
     cmd = { "TodoQuickFix" },
     keys = {
       { "<leader>T", function() Snacks.picker.todo_comments() end, desc = "Open TODOs in Telescope" },
