@@ -17,5 +17,7 @@ return {
 
   { import = "astrocommunity.motion.leap-nvim" },
 
+  { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
+
   { import = "astrocommunity.recipes.neovide" },
 }
