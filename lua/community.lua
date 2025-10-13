@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.ocaml" },
   { import = "astrocommunity.pack.jj" },
+  { import = "astrocommunity.pack.ansible" },
 
   { import = "astrocommunity.motion.leap-nvim" },
 
