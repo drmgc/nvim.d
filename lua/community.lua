@@ -15,6 +15,7 @@ return {
   { import = "astrocommunity.pack.ocaml" },
   { import = "astrocommunity.pack.jj" },
   { import = "astrocommunity.pack.ansible" },
+  { import = "astrocommunity.pack.markdown" },
 
   { import = "astrocommunity.motion.leap-nvim" },
 
