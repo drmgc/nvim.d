@@ -7,8 +7,7 @@
 return {
   "javiorfo/nvim-soil",
 
-  -- -- Optional for puml syntax highlighting:
-  -- dependencies = { "javiorfo/nvim-nyctophilia" },
+  dependencies = { "javiorfo/nvim-nyctophilia" }, -- for puml syntax highlighting
 
   lazy = true,
   ft = "plantuml",
