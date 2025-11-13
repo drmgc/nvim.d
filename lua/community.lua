@@ -17,6 +17,7 @@ return {
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   { import = "astrocommunity.motion.leap-nvim" },
 
