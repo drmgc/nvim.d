@@ -19,6 +19,8 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.programming-language-support.rest-nvim" },
 
+  { import = "astrocommunity.git.diffview-nvim" },
+
   { import = "astrocommunity.motion.leap-nvim" },
 
   { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
