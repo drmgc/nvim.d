@@ -78,6 +78,9 @@ snippet jd "jest / describe"
 snippet jdt "jest / describe keyof Testee"
 	describe('${1}' satisfies keyof Testee, () => {${0}});
 
+snippet jdp "jest / describe Testee.prototype...name"
+	describe(Testee.prototype.${1}.name, () => {${0}});
+
 snippet jt "jest / it"
 	it('${1}', () => {${0}});
 
@@ -95,8 +98,8 @@ snippet nie "throw new Error(...)"
 	throw new Error('Not yet implemented'); // TODO: implement$0
 
 snippet anie "throw new Error(...) /* async */"
-  await Promise.resolve()
-	throw new Error('Not yet implemented'); // TODO: implement$0
+  await Promise.resolve();
+  throw new Error('Not yet implemented'); // TODO: implement$0
 
 ##
 ## Asserts
