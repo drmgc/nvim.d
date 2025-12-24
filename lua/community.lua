@@ -13,7 +13,7 @@ return {
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.ocaml" },
-  { import = "astrocommunity.pack.jj" },
+  -- { import = "astrocommunity.pack.jj" },
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.bash" },
