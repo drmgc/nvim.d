@@ -1,11 +1,9 @@
 local envs = require "drmgc.envs"
 
-if not envs.enable_copilot then return {} end
-
 return {
-  { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.editing-support.codecompanion-nvim" },
+  { import = "astrocommunity.completion.copilot-lua", cond = envs.enable_copilot },
+  { import = "astrocommunity.completion.copilot-lua-cmp", cond = envs.enable_copilot },
+  { import = "astrocommunity.editing-support.codecompanion-nvim", cond = envs.enable_copilot },
   {
     "zbirenbaum/copilot.lua",
     cond = function()
@@ -28,6 +26,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "zbirenbaum/copilot.lua" },
+    cond = envs.enable_copilot,
     opts = function(_, opts)
       local cmp, copilot = require "cmp", require "copilot.suggestion"
 
