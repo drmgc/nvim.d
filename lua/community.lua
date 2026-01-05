@@ -25,5 +25,7 @@ return {
 
   { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
 
+  { import = "astrocommunity.note-taking/obsidian-nvim" },
+
   { import = "astrocommunity.recipes.neovide" },
 }
