@@ -12,6 +12,7 @@ return {
         -- install language servers
         "lua-language-server",
         -- "typescript-language-server",
+        "tilt",
 
         -- install formatters
         "stylua",
