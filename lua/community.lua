@@ -13,11 +13,12 @@ return {
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.typst" },
   { import = "astrocommunity.pack.ocaml" },
+  { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.jj" },
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
+  -- { import = "astrocommunity.programming-language-support.rest-nvim" },
 
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
 

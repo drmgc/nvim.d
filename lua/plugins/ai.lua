@@ -3,7 +3,7 @@ local envs = require "drmgc.envs"
 return {
   { import = "astrocommunity.completion.copilot-lua", cond = envs.enable_copilot },
   { import = "astrocommunity.completion.copilot-lua-cmp", cond = envs.enable_copilot },
-  { import = "astrocommunity.editing-support.codecompanion-nvim", cond = envs.enable_copilot },
+  { import = "astrocommunity.ai.codecompanion-nvim", cond = envs.enable_copilot },
   {
     "zbirenbaum/copilot.lua",
     cond = function()
