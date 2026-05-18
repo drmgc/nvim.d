@@ -63,6 +63,16 @@ return {
       -- do not notify about chdir on each tab switch
       notify = false,
     },
+    -- Autocommands
+    autocmds = {
+      terminal_settings = {
+        {
+          event = "TermOpen",
+          desc = "Disable spelling in terminal",
+          callback = function() vim.opt_local.spell = false end,
+        },
+      },
+    },
     -- Mappings can be configured through AstroCore as well.
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
